@@ -3,7 +3,7 @@ export default function ThankYouPage() {
     <main className="min-h-screen flex items-center justify-center bg-stone-100 px-6">
       <div className="max-w-lg rounded-3xl border border-stone-200 bg-white p-10 text-center shadow-sm">
         <h1 className="text-2xl font-semibold text-stone-900">
-          🎉 You're on the Serenity founding access list.
+          🎉 You&apos;re on the Serenity founding access list.
         </h1>
 
         <p className="mt-4 text-sm text-stone-600">
