@@ -557,35 +557,81 @@ function FAQSection() {
       </div>
     </section>
   );
-}
-
-function FinalCTASection() {
+}function FinalCTASection() {
   return (
     <section className="border-t border-stone-200 bg-stone-100">
-      <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">Serenity</p>
+      <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-2 md:items-center">
+          <div className="max-w-xl">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">
+              Serenity Founding Access
+            </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900">
-              Confidence, engineered.
+              Join the first users shaping Serenity.
             </h2>
             <p className="mt-4 text-sm leading-7 text-stone-600">
-              A premium discreet recovery brand focused on calm design, dependable performance, and a more thoughtful personal care experience.
+              We are inviting a limited number of early users and recovery clinics
+              to help refine the Serenity Recovery Brief before full production.
+              Join the Founding Access Programme to receive early product access
+              and updates.
             </p>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#consumer"
+                className="rounded-2xl bg-stone-900 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+              >
+                Consumer early access
+              </a>
+              <a
+                href="#clinic"
+                className="rounded-2xl border border-stone-300 bg-white px-6 py-3 text-center text-sm font-medium text-stone-800 shadow-sm transition hover:bg-stone-100"
+              >
+                Clinical partnership
+              </a>
+            </div>
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#consumer"
-              className="rounded-2xl bg-stone-900 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:opacity-90"
-            >
-              Join consumer early access
-            </a>
-            <a
-              href="#clinic"
-              className="rounded-2xl border border-stone-300 bg-white px-6 py-3 text-center text-sm font-medium text-stone-800 shadow-sm transition hover:bg-stone-100"
-            >
-              Explore clinical partnership
-            </a>
+
+          <div className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-medium text-stone-900">
+              Founding Access Waitlist
+            </p>
+            <p className="mt-1 text-xs text-stone-500">
+              Limited to the first 500 participants
+            </p>
+
+            <form className="mt-4 space-y-3">
+              <input
+                type="text"
+                placeholder="Your name"
+                className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+              />
+
+              <input
+                type="email"
+                placeholder="Email address"
+                className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+              />
+
+              <select className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm">
+                <option>I am interested as...</option>
+                <option>Consumer / Caregiver</option>
+                <option>Clinic / Medical professional</option>
+                <option>Distributor / Partner</option>
+              </select>
+
+              <button
+                type="submit"
+                className="w-full rounded-xl bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+              >
+                Join Founding Access
+              </button>
+
+              <p className="text-[11px] text-stone-400">
+                We&apos;ll only use your email to send Serenity updates and early
+                access information.
+              </p>
+            </form>
           </div>
         </div>
       </div>
