@@ -1,3 +1,5 @@
+"use client";
+
 const heroHighlights = [
   {
     title: "Universal Fit",
@@ -137,7 +139,6 @@ const roadmapPhases = [
   },
 ];
 
-
 const trustPoints = [
   "Performance-engineered recovery brief",
   "Designed for calm, discreet everyday use",
@@ -182,17 +183,30 @@ const faqs = [
   },
 ];
 
-function SectionHeader({ eyebrow, title, body, className = "max-w-3xl mb-10" }: SectionHeaderProps) {
+function SectionHeader({
+  eyebrow,
+  title,
+  body,
+  className = "max-w-3xl mb-10",
+}: SectionHeaderProps) {
   return (
     <div className={className}>
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">{eyebrow}</p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">{title}</h2>
+      <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">
+        {eyebrow}
+      </p>
+      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
+        {title}
+      </h2>
       <p className="mt-4 text-lg leading-8 text-stone-600">{body}</p>
     </div>
   );
 }
 
-function InfoCard({ title, body, className = "rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm" }: InfoCardProps) {
+function InfoCard({
+  title,
+  body,
+  className = "rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm",
+}: InfoCardProps) {
   return (
     <div className={className}>
       <h3 className="text-lg font-semibold text-stone-900">{title}</h3>
@@ -201,7 +215,11 @@ function InfoCard({ title, body, className = "rounded-[1.75rem] border border-st
   );
 }
 
-function BulletListCard({ title, items, className = "rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm" }: BulletListCardProps) {
+function BulletListCard({
+  title,
+  items,
+  className = "rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm",
+}: BulletListCardProps) {
   return (
     <div className={className}>
       <h3 className="text-lg font-semibold text-stone-900">{title}</h3>
@@ -224,10 +242,14 @@ function HeroSection() {
               Founding Access Programme · Clinical & Consumer Early Release
             </p>
             <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-stone-900 sm:text-5xl lg:text-6xl">
-              Discreet performance essentials, thoughtfully engineered for recovery.
+              Discreet performance essentials, thoughtfully engineered for
+              recovery.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-stone-600">
-              A premium recovery brief designed to support comfort, confidence, and dignity during physical transitions — with adaptive fit, targeted absorbency, and a calmer experience for both everyday users and clinical recovery settings.
+              A premium recovery brief designed to support comfort, confidence,
+              and dignity during physical transitions — with adaptive fit,
+              targeted absorbency, and a calmer experience for both everyday
+              users and clinical recovery settings.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -245,7 +267,10 @@ function HeroSection() {
             </div>
             <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 text-sm text-stone-600 sm:grid-cols-4">
               {heroHighlights.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm"
+                >
                   <p className="font-medium text-stone-900">{item.title}</p>
                   <p className="mt-1">{item.body}</p>
                 </div>
@@ -265,18 +290,33 @@ function HeroSection() {
                     <div className="rounded-[1.75rem] border border-stone-200 bg-white px-8 py-12 text-center shadow-sm">
                       <div className="mx-auto mb-5 h-14 w-14 rounded-full bg-stone-200" />
                       <div className="text-center">
-                        <p className="text-xs uppercase tracking-[0.35em] text-stone-400">Serenity</p>
-                        <p className="mt-2 text-sm font-medium text-stone-600">Confidence, engineered.</p>
+                        <p className="text-xs uppercase tracking-[0.35em] text-stone-400">
+                          Serenity
+                        </p>
+                        <p className="mt-2 text-sm font-medium text-stone-600">
+                          Confidence, engineered.
+                        </p>
                       </div>
-                      <h2 className="mt-3 text-2xl font-semibold text-stone-900">Recovery Brief</h2>
+                      <h2 className="mt-3 text-2xl font-semibold text-stone-900">
+                        Recovery Brief
+                      </h2>
                       <p className="mt-4 text-sm leading-6 text-stone-600">
-                        Discreet confidence, thoughtfully designed for recovery, comfort, and dependable daytime support.
+                        Discreet confidence, thoughtfully designed for recovery,
+                        comfort, and dependable daytime support.
                       </p>
                       <div className="mt-6 grid grid-cols-2 gap-3 text-left text-xs text-stone-600">
-                        <div className="rounded-xl bg-stone-50 p-3">Breathable outer layer</div>
-                        <div className="rounded-xl bg-stone-50 p-3">Skin-conscious feel</div>
-                        <div className="rounded-xl bg-stone-50 p-3">Reduced-plastic design</div>
-                        <div className="rounded-xl bg-stone-50 p-3">Adaptive side panels</div>
+                        <div className="rounded-xl bg-stone-50 p-3">
+                          Breathable outer layer
+                        </div>
+                        <div className="rounded-xl bg-stone-50 p-3">
+                          Skin-conscious feel
+                        </div>
+                        <div className="rounded-xl bg-stone-50 p-3">
+                          Reduced-plastic design
+                        </div>
+                        <div className="rounded-xl bg-stone-50 p-3">
+                          Adaptive side panels
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -314,13 +354,20 @@ function AudienceSection() {
     <section className="border-y border-stone-200 bg-white">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2">
-          <div id="consumer" className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-7 shadow-sm">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">For consumers & caregivers</p>
+          <div
+            id="consumer"
+            className="rounded-[1.75rem] border border-stone-200 bg-stone-50 p-7 shadow-sm"
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">
+              For consumers & caregivers
+            </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900">
               Created for recovery, transition, and daily reassurance.
             </h2>
             <p className="mt-4 text-sm leading-7 text-stone-600">
-              Designed for adults in post-surgery recovery, older adults at home, and caregivers seeking a calmer, more considered personal care experience.
+              Designed for adults in post-surgery recovery, older adults at
+              home, and caregivers seeking a calmer, more considered personal
+              care experience.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {consumerAudienceCards.map((item) => (
@@ -333,32 +380,53 @@ function AudienceSection() {
               ))}
             </div>
             <div className="mt-6 rounded-[1.5rem] border border-stone-200 bg-white p-5">
-              <p className="text-sm font-medium text-stone-900">Founding Access Programme</p>
+              <p className="text-sm font-medium text-stone-900">
+                Founding Access Programme
+              </p>
               <ul className="mt-3 space-y-3 text-sm text-stone-600">
                 <li>• Priority access to the first production batch</li>
-                <li>• Founding Edition pricing in exchange for structured feedback</li>
-                <li>• Opportunity to help refine fit, comfort, and overall experience</li>
+                <li>
+                  • Founding Edition pricing in exchange for structured feedback
+                </li>
+                <li>
+                  • Opportunity to help refine fit, comfort, and overall
+                  experience
+                </li>
               </ul>
             </div>
           </div>
 
-          <div id="clinic" className="rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">For clinics & recovery partners</p>
+          <div
+            id="clinic"
+            className="rounded-[1.75rem] border border-stone-200 bg-white p-7 shadow-sm"
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">
+              For clinics & recovery partners
+            </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900">
-              A performance-engineered recovery product for structured early trial.
+              A performance-engineered recovery product for structured early
+              trial.
             </h2>
             <p className="mt-4 text-sm leading-7 text-stone-600">
-              We are inviting a small number of recovery-focused clinics and specialist partners to participate in a limited trial programme centred on comfort, absorbency performance, fit stability, and real-world recovery use.
+              We are inviting a small number of recovery-focused clinics and
+              specialist partners to participate in a limited trial programme
+              centred on comfort, absorbency performance, fit stability, and
+              real-world recovery use.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {clinicFeatureCards.map((item) => (
-                <div key={item} className="rounded-[1.25rem] bg-stone-50 p-5 text-sm leading-7 text-stone-700">
+                <div
+                  key={item}
+                  className="rounded-[1.25rem] bg-stone-50 p-5 text-sm leading-7 text-stone-700"
+                >
                   {item}
                 </div>
               ))}
             </div>
             <div className="mt-6 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5">
-              <p className="text-sm font-medium text-stone-900">Clinical partner programme includes</p>
+              <p className="text-sm font-medium text-stone-900">
+                Clinical partner programme includes
+              </p>
               <ul className="mt-3 space-y-3 text-sm text-stone-600">
                 <li>• Limited discounted trial allocation</li>
                 <li>• Structured performance and comfort reporting</li>
@@ -377,7 +445,10 @@ function TrustStrip() {
     <section className="border-y border-stone-200 bg-white/70">
       <div className="mx-auto grid max-w-6xl gap-4 px-6 py-6 text-sm text-stone-600 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {trustPoints.map((point) => (
-          <div key={point} className="rounded-2xl border border-stone-200 bg-white px-4 py-3 shadow-sm">
+          <div
+            key={point}
+            className="rounded-2xl border border-stone-200 bg-white px-4 py-3 shadow-sm"
+          >
             {point}
           </div>
         ))}
@@ -401,21 +472,33 @@ function PackagingSection() {
             <div className="flex h-80 w-64 flex-col items-center justify-between rounded-2xl bg-[#E8E5E0] p-8 shadow-xl">
               <div className="text-center">
                 <div className="mx-auto mb-4 h-8 w-5 rounded-full bg-[#8FAF9A]" />
-                <h3 className="text-2xl font-semibold tracking-tight text-[#2F3432]">Serenity</h3>
-                <p className="mt-1 text-xs text-stone-600">Confidence, engineered.</p>
+                <h3 className="text-2xl font-semibold tracking-tight text-[#2F3432]">
+                  Serenity
+                </h3>
+                <p className="mt-1 text-xs text-stone-600">
+                  Confidence, engineered.
+                </p>
               </div>
 
               <div className="text-center">
-                <p className="text-sm font-medium text-stone-700">Recovery Brief</p>
+                <p className="text-sm font-medium text-stone-700">
+                  Recovery Brief
+                </p>
                 <p className="text-xs text-stone-500">Founding Edition</p>
-                <p className="text-xs text-stone-500">Universal Fit — Medium</p>
+                <p className="text-xs text-stone-500">
+                  Universal Fit — Medium
+                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-2 text-[10px] text-stone-600">
                 <div className="rounded-md bg-white px-2 py-1">Breathable</div>
                 <div className="rounded-md bg-white px-2 py-1">Soft feel</div>
-                <div className="rounded-md bg-white px-2 py-1">Reduced plastic</div>
-                <div className="rounded-md bg-white px-2 py-1">Adaptive fit</div>
+                <div className="rounded-md bg-white px-2 py-1">
+                  Reduced plastic
+                </div>
+                <div className="rounded-md bg-white px-2 py-1">
+                  Adaptive fit
+                </div>
               </div>
             </div>
           </div>
@@ -473,12 +556,18 @@ function TechnicalSpecSection() {
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {technicalSpecCards.map((card) => (
-            <BulletListCard key={card.title} title={card.title} items={card.items} />
+            <BulletListCard
+              key={card.title}
+              title={card.title}
+              items={card.items}
+            />
           ))}
         </div>
 
         <div className="mt-10 rounded-[1.75rem] border border-stone-200 bg-stone-50 p-8">
-          <h3 className="text-xl font-semibold text-stone-900">Pilot Production Targets</h3>
+          <h3 className="text-xl font-semibold text-stone-900">
+            Pilot Production Targets
+          </h3>
           <div className="mt-4 grid gap-4 text-sm text-stone-700 sm:grid-cols-2">
             <div>Initial pilot quantity: 5,000 – 10,000 units</div>
             <div>Launch size: Universal Fit – Medium</div>
@@ -502,9 +591,16 @@ function RoadmapSection() {
 
       <div className="grid gap-6 md:grid-cols-3">
         {roadmapPhases.map((phase) => (
-          <div key={phase.title} className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.3em] text-stone-400">{phase.eyebrow}</p>
-            <h3 className="mt-3 text-lg font-semibold text-stone-900">{phase.title}</h3>
+          <div
+            key={phase.title}
+            className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-sm"
+          >
+            <p className="text-xs uppercase tracking-[0.3em] text-stone-400">
+              {phase.eyebrow}
+            </p>
+            <h3 className="mt-3 text-lg font-semibold text-stone-900">
+              {phase.title}
+            </h3>
             <ul className="mt-3 space-y-2 text-sm text-stone-600">
               {phase.items.map((item) => (
                 <li key={item}>{item}</li>
@@ -515,9 +611,13 @@ function RoadmapSection() {
       </div>
 
       <div className="mt-10 rounded-[1.75rem] border border-stone-200 bg-stone-50 p-8">
-        <h3 className="text-xl font-semibold text-stone-900">Architecture strategy</h3>
+        <h3 className="text-xl font-semibold text-stone-900">
+          Architecture strategy
+        </h3>
         <p className="mt-4 text-sm text-stone-700">
-          Starting with a single universal size reduces manufacturing complexity, speeds up validation, and helps Serenity prove performance before broadening the line.
+          Starting with a single universal size reduces manufacturing
+          complexity, speeds up validation, and helps Serenity prove performance
+          before broadening the line.
         </p>
       </div>
     </section>
@@ -528,12 +628,17 @@ function FounderNoteSection() {
   return (
     <section className="border-y border-stone-200 bg-white">
       <div className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">Why Serenity exists</p>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-stone-500">
+          Why Serenity exists
+        </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
           Built for a calmer experience in recovery and everyday dignity.
         </h2>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-stone-600">
-          Serenity is being created around a simple belief: products used during physical transitions should feel more respectful, more discreet, and more thoughtfully designed. Performance matters, but so does the experience of living with the product.
+          Serenity is being created around a simple belief: products used during
+          physical transitions should feel more respectful, more discreet, and
+          more thoughtfully designed. Performance matters, but so does the
+          experience of living with the product.
         </p>
       </div>
     </section>
@@ -552,7 +657,11 @@ function FAQSection() {
 
       <div className="grid gap-6 md:grid-cols-3">
         {faqs.map((item) => (
-          <InfoCard key={item.question} title={item.question} body={item.answer} />
+          <InfoCard
+            key={item.question}
+            title={item.question}
+            body={item.answer}
+          />
         ))}
       </div>
     </section>
@@ -593,10 +702,10 @@ function FinalCTASection() {
               Join the first users shaping Serenity.
             </h2>
             <p className="mt-4 text-sm leading-7 text-stone-600">
-              We are inviting a limited number of early users and recovery clinics
-              to help refine the Serenity Recovery Brief before full production.
-              Join the Founding Access Programme to receive early product access
-              and updates.
+              We are inviting a limited number of early users and recovery
+              clinics to help refine the Serenity Recovery Brief before full
+              production. Join the Founding Access Programme to receive early
+              product access and updates.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
