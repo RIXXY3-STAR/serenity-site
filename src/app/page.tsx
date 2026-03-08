@@ -560,7 +560,6 @@ function FAQSection() {
 }
 
 function FinalCTASection() {
-function FinalCTASection() {
   return (
     <section className="border-t border-stone-200 bg-stone-100">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
