@@ -557,7 +557,7 @@ function FAQSection() {
       </div>
     </section>
   );
-}function FinalCTASection() {
+function FinalCTASection() {
   return (
     <section className="border-t border-stone-200 bg-stone-100">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
@@ -600,20 +600,29 @@ function FAQSection() {
               Limited to the first 500 participants
             </p>
 
-            <form className="mt-4 space-y-3">
+            <form
+              action="https://formspree.io/f/xlgpdyeb"
+              method="POST"
+              className="mt-4 space-y-3"
+            >
               <input
                 type="text"
+                name="name"
                 placeholder="Your name"
                 className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Email address"
                 className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
               />
 
-              <select className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm">
+              <select
+                name="interest"
+                className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+              >
                 <option>I am interested as...</option>
                 <option>Consumer / Caregiver</option>
                 <option>Clinic / Medical professional</option>
@@ -638,7 +647,6 @@ function FAQSection() {
     </section>
   );
 }
-
 export default function RecoveryBrandLandingPage() {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800">
