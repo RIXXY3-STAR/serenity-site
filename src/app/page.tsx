@@ -632,10 +632,10 @@ function FinalCTASection() {
               </select>
 
               <input
-                type="hidden"
-                name="_next"
-                value="https://serenity-site-ruby.vercel.app/thanks"
-              />
+  type="hidden"
+  name="_redirect"
+  value="https://serenity-site-ruby.vercel.app/thanks"
+/>
 
               <button
                 type="submit"
