@@ -629,6 +629,12 @@ function FinalCTASection() {
                 <option>Distributor / Partner</option>
               </select>
 
+              <input
+                type="hidden"
+                name="_next"
+                value="https://serenity-site-ruby.vercel.app/thanks"
+              />
+
               <button
                 type="submit"
                 className="w-full rounded-xl bg-stone-900 px-4 py-2 text-sm font-medium text-white hover:opacity-90"
@@ -647,6 +653,7 @@ function FinalCTASection() {
     </section>
   );
 }
+
 export default function RecoveryBrandLandingPage() {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800">
