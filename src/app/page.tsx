@@ -557,6 +557,9 @@ function FAQSection() {
       </div>
     </section>
   );
+}
+
+function FinalCTASection() {
 function FinalCTASection() {
   return (
     <section className="border-t border-stone-200 bg-stone-100">
