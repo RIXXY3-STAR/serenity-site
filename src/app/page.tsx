@@ -560,6 +560,27 @@ function FAQSection() {
 }
 
 function FinalCTASection() {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/xlgpdyeb", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      window.location.href = "/thanks";
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }
+
   return (
     <section className="border-t border-stone-200 bg-stone-100">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
@@ -602,16 +623,13 @@ function FinalCTASection() {
               Limited to the first 500 participants
             </p>
 
-            <form
-              action="https://formspree.io/f/xlgpdyeb"
-              method="POST"
-              className="mt-4 space-y-3"
-            >
+            <form onSubmit={handleSubmit} className="mt-4 space-y-3">
               <input
                 type="text"
                 name="name"
                 placeholder="Your name"
                 className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+                required
               />
 
               <input
@@ -619,23 +637,19 @@ function FinalCTASection() {
                 name="email"
                 placeholder="Email address"
                 className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+                required
               />
 
               <select
                 name="interest"
                 className="w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+                required
               >
-                <option>I am interested as...</option>
+                <option value="">I am interested as...</option>
                 <option>Consumer / Caregiver</option>
                 <option>Clinic / Medical professional</option>
                 <option>Distributor / Partner</option>
               </select>
-
-              <input
-  type="hidden"
-  name="_redirect"
-  value="https://serenity-site-ruby.vercel.app/thanks"
-/>
 
               <button
                 type="submit"
