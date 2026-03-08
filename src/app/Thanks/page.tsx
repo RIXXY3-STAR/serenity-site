@@ -8,7 +8,7 @@ export default function ThankYouPage() {
 
         <p className="mt-4 text-sm text-stone-600">
           Thank you for joining the Serenity Founding Access Programme.
-          We'll keep you updated with early product access and development updates.
+          We&apos;ll keep you updated with early product access and development updates.
         </p>
 
         <a
